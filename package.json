@@ -1,0 +1,15 @@
+{
+  "name": "leno-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:sass": "sass scss/style.scss css/style.css",
+    "watch:sass": "sass --watch scss/style.scss css/style.css",
+    "build:sass:min": "sass scss/style.scss css/style.min.css --style=compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

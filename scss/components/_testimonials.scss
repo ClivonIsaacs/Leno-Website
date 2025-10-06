@@ -1,0 +1,61 @@
+@use "../abstracts/config";
+
+// Testimonials
+.testimonials {
+  padding: 4rem 2rem;
+  text-align: center;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: center;
+  }
+
+  &__card {
+    padding: 0 3rem;
+
+    &-image img {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &-description {
+      font-style: italic;
+      margin-top: 1.5rem;
+    }
+
+    &-title {
+      font-size: 1.22rem;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+// Media Queries
+@media (max-width: 992px) {
+  .testimonials {
+    &__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__card:nth-child(3) {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    &__container {
+      grid-template-columns: 1fr;
+    }
+
+    &__card:nth-child(2) {
+      display: none;
+    }
+  }
+}

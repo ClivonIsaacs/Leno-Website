@@ -1,0 +1,52 @@
+@use "./config";
+
+// Container
+@mixin container($width) {
+  width: 100%;
+  max-width: $width;
+  margin: 0 auto;
+}
+
+.container {
+  @include container(1100px);
+}
+
+// Buttons
+@mixin button(
+  $bg: config.$primary-color,
+  $color: #fff,
+  $border-color: config.$primary-color,
+  $weight: 600,
+  $radius: 50px,
+  $bg-hover: config.$secondary-color,
+  $border-hover: config.$primary-color,
+  $outline-color: config.$primary-color
+) {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  background-color: $bg;
+  color: $color;
+  border: 2px solid $border-color;
+  font-weight: $weight;
+  border-radius: $radius;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    outline 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: $bg-hover;
+    border-color: $border-hover;
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $outline-color;
+    outline-offset: 2px;
+  }
+}
+
+.btn {
+  @include button();
+}

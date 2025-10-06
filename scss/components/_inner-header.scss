@@ -1,0 +1,12 @@
+@use "../abstracts/config";
+
+// Inner-Header
+.inner-header {
+  padding: 10rem 2rem 6rem;
+  background: #000 url("/images/header-background.jpg") center center/cover
+    no-repeat;
+
+  &__title {
+    text-transform: none;
+  }
+}

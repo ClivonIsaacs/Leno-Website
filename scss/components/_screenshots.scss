@@ -1,0 +1,33 @@
+@use "../abstracts/config";
+
+// Screenshots
+.screenshots {
+  padding: 6rem 2rem;
+  background-color: config.$tertiary-color;
+
+  &__container {
+    max-width: 1200px;
+  }
+
+  &__title {
+    font-size: 2.3rem;
+    text-align: center;
+    border-bottom: 2px solid config.$primary-color;
+    width: 300px;
+    margin: 0 auto 2.5rem;
+  }
+
+  &__images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      width: 100%;
+      max-width: 200px;
+      margin: 0 auto;
+    }
+  }
+}
